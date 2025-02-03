@@ -78,3 +78,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", handleScroll);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".timeline-item");
+
+    const revealOnScroll = () => {
+        let scrollY = window.scrollY + window.innerHeight - 50;
+        items.forEach(item => {
+            if (item.offsetTop < scrollY) {
+                item.classList.add("show");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+});

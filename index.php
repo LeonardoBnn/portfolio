@@ -18,10 +18,6 @@
         <a href="#parcours"><i class="fa-solid fa-book"></i>&ensp;Parcours</a>
         <a href="#projets"><i class="fa-regular fa-folder"></i>&nbsp; Projets</a>
         <a href="#contacts"><i class="fa-regular fa-address-book"></i>&nbsp; Contacts</a>
-        <div class="social">
-            <a href="https://www.linkedin.com/in/leonardo-bonino-b71078244"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:boninoleonardo@gmail.com"><i class="fa-regular fa-paper-plane"></i></a>
-        </div>
     </div>
 
     <div class="main">
@@ -120,6 +116,7 @@
             <h2>Évolution de mes Hard Skills :</h2>
             <br>
             <hr>
+            <br>
             <div class="skills-container">
 
                 <div class="skill">
@@ -157,14 +154,119 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
-        <section id="parcours" class="parcours">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Mon Parcours :</h2>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <section id="parcours" class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-content">
+                    <h3>École d'hôtellerie en Italie</h3>
+                    <p>J'ai terminé l'école d'hôtellerie et je suis parti à Milan pour une formation en mixologie.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Octobre 2019</div>
+                <div class="timeline-content">
+                    <h3>Formation Mixology Academy</h3>
+                    <p>J'ai suivi une formation reconnue en Europe pour devenir barman professionnel.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">Mars 2020</div>
+                <div class="timeline-content">
+                    <h3>Barman chez Big Mamma</h3>
+                    <p>J'ai intégré La Felicità à Paris et acquis une solide expérience en tant que chef d'équipe.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h3>Le Grand Mazarin</h3>
+                    <p>J'ai découvert le monde du luxe en tant que barman dans un hôtel prestigieux.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">Octobre 2024</div>
+                <div class="timeline-content">
+                    <h3>Inscription au CFA Insta</h3>
+                    <p>Après une longue réflexion, j'ai décidé de me réorienter et de suivre ma passion.</p>
+                </div>
+            </div>
         </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Mes projets :</h2>
+        <br>
+        <hr>
+        <br>
+        <br>
         <section id="projets" class="projets">
+            <div class="projects-container">
+                <div class="card">
+                    <img src="img/glpi.png" alt="Page de connexion GLPI.">
+                    <div class="card-content">
+                        <h3>GLPI</h3>
+                        <p>Installation et configuration de GLPI sur une VM Debian 12.</p>
+                        <p class="technologies">Linux</p>
+                        <a href="https://docs.google.com/presentation/d/1ZuUFy8vFfI9jE3_-yjgGzLP-5aLF-3zwtS6DSOXLsPM/preview" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="image-projet2.jpg" alt="Projet 2">
+                    <div class="card-content">
+                        <h3>Projet 2</h3>
+                        <p>Description du projet.</p>
+                        <p class="technologies">HTML, CSS, PHP</p>
+                        <a href="lien-projet2.html" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="contacts" class="contacts">
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Contacts</h3>
+                        <p>Email : <a href="mailto:boninoleonardo@gmail.com">boninoleonardo@gmail.com</a></p>
+                        <p>Téléphone : <a href="tel:+33749034251">+33 7 49 03 42 51</a></p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Réseaux Sociaux</h3>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/leonardo-bonino-b71078244" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/leonardo_bonino_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://github.com/LeonardoBnn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Adresse</h3>
+                        <p>Rue de Reuilly, Paris, France</p>
+                    </div>
+                </div>
+            </footer>
         </section>
     </div>
     

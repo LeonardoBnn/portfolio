@@ -45,7 +45,7 @@ h1 {
     margin-left: 240px;
     height: 100%;
     top: 0;
-    padding: 20px;
+    padding:20px;
     font-family: Arial, Helvetica, sans-serif;
     color: #ABABAB;
     background: linear-gradient(135deg, #501B1D, #833940, #64485C);
@@ -60,10 +60,10 @@ h1 {
   }
 
 .img-leo{
-    width: 150px;
+    width: 135px;
     height: 150px;
     border-radius: 50%;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
 .nav-bar a{
@@ -85,16 +85,6 @@ h1 {
 .nav-bar a.active{
     color: #833940; 
     transform: scale(1.2); 
-}
-
-.social{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-.social a{
-    text-decoration: none;
-    padding: 0;
 }
 
 #typed-text {
@@ -277,3 +267,178 @@ body.modal-open {
 .progress.php { width: 15%; background: #777BB3; }   /* Violet PHP */
 .progress.c { width: 20%; background: #A8B9CC; }     /* Gris C */
 .progress.sql { width: 15%; background: #F29111; }   /* Orange SQL */
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 50px auto;
+    max-width: 700px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #ABABAB;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    text-align: right;
+}
+
+.timeline-date {
+    background: #833940;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 40%;
+    text-align: left;
+    color: #fff;
+}
+
+/* Effet d’apparition */
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-content {
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+.footer {
+    background-color: #47242A; /* Même couleur que la sidebar */
+    color: #ADADAD;
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    transition: background 0.5s ease;
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    margin: 10px 0;
+}
+
+.footer-section h3 {
+    color: #833940;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ADADAD;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #833940;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Unification avec la sidebar */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .card .technologies {
+    font-size: 0.9em;
+    color: #fff;
+  }
+  
+  .card .btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #501B1D;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
