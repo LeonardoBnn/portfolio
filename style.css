@@ -1,0 +1,279 @@
+
+hr{
+    width: 30%;
+    margin: 0 left;
+    border: 1px solid #ABABAB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bienvenue{
+    margin: 0px, 50px;
+}
+
+h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ABABAB;
+    margin: 50px;
+
+    animation: titlePulse 5s ease infinite;
+}
+@keyframes titlePulse {
+    0%, 100% { transform: scale(1.0); }
+    50% { transform: scale(1.1); }
+}
+
+.nav-bar{
+    height: 100%; 
+    width: 250px; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #47242A; 
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main{
+    margin-left: 240px;
+    height: 100%;
+    top: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ABABAB;
+    background: linear-gradient(135deg, #501B1D, #833940, #64485C);
+    background-size: 300% 300%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+.img-leo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 40px;
+}
+
+.nav-bar a{
+    margin-left: 35px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ADADAD;
+    display: block;
+    transition: transform .1.5s;
+}
+
+.nav-bar a:hover{
+    color: #833940;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.nav-bar a.active{
+    color: #833940; 
+    transform: scale(1.2); 
+}
+
+.social{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.social a{
+    text-decoration: none;
+    padding: 0;
+}
+
+#typed-text {
+    font-size: 18px;
+    white-space: pre-wrap;
+    padding-right: 5px;
+}
+
+.cv {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.arrow-line {
+    position: absolute;
+    top: 50px;  /* Position initiale de la flèche */
+    left: 50px; /* Position initiale de la flèche */
+    width: 200px;
+    height: 100px;
+    pointer-events: none;  /* La flèche ne bloque pas les clics */
+}
+
+.cv {
+    text-align: center;
+    position: relative;
+    padding: 50px 20px;
+}
+
+.arrow-line {
+    position: absolute;
+    top: 50px; /* Position du départ de la flèche */
+    left: 50px;
+    width: 400px;
+    height: 200px;
+    pointer-events: none;  /* La flèche ne bloque pas les clics */
+    visibility: hidden; /* Masquer la flèche au début */
+}
+
+.moncv {
+    background-color: #2e1114;
+    color: #ADADAD;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.moncv:hover {
+    background-color: #501B1D;
+    transform: scale(1.1);
+}
+
+/* Empêcher le scroll de l'arrière-plan quand la modale est ouverte */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Styles de la modale */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenu de la modale */
+.modal-content {
+    background-color: white;
+    width: 80%;
+    height: 90vh;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Bouton de fermeture */
+.close {
+    align-self: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* Ajuster l'iframe */
+#cvFrame {
+    flex-grow: 1;
+    border: none;
+}
+
+.bts-container {
+    display: flex;
+    justify-content: space-between;  /* Espacement entre les paragraphes */
+    gap: 20px;  /* Espace entre les paragraphes */
+    opacity: 0;
+    transform: translateY(50px); /* Déplacement vers le bas au départ */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.bts-text {
+    width: 48%;  /* Ajustement pour occuper 50% de l'espace */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+/* Effet d'apparition */
+.bts-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bts-text ul{
+    padding-left: 30px;
+}
+
+.skills-container {
+    width: 60%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.skills-container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.skill {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.skill span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #333;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Couleurs et largeurs des barres */
+.progress.html { width: 80%; background: #E34F26; }  /* Orange HTML */
+.progress.css { width: 65%; background: #1572B6; }   /* Bleu CSS */
+.progress.php { width: 15%; background: #777BB3; }   /* Violet PHP */
+.progress.c { width: 20%; background: #A8B9CC; }     /* Gris C */
+.progress.sql { width: 15%; background: #F29111; }   /* Orange SQL */
