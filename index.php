@@ -187,7 +187,7 @@
             <div class="timeline-item">
                 <div class="timeline-date">Mars 2020</div>
                 <div class="timeline-content">
-                    <h3>Barman chez Big Mamma</h3>
+                    <h3>La Felicità-Big Mamma</h3>
                     <p>J'ai intégré La Felicità à Paris et acquis une solide expérience en tant que chef d'équipe.</p>
                 </div>
             </div>

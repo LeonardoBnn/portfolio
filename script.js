@@ -84,13 +84,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const revealOnScroll = () => {
         let scrollY = window.scrollY + window.innerHeight - 50;
-        items.forEach(item => {
-            if (item.offsetTop < scrollY) {
-                item.classList.add("show");
+
+        items.forEach((item, index) => {
+            if (item.offsetTop < scrollY && !item.classList.contains("visible")) {
+                item.classList.add("visible");
+
+                setTimeout(() => {
+                    item.style.opacity = 1;
+                    item.style.transform = "translateY(0)";
+                }, index * 5000); // Ajuste la cadence (500ms entre chaque élément)
             }
         });
     };
 
     window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
+    revealOnScroll(); // Exécute une première vérification si des éléments sont déjà visibles au chargement
 });
