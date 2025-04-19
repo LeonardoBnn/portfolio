@@ -261,10 +261,11 @@ body.modal-open {
 }
 
 .progress.html { width: 80%; background: #E34F26; }  /* Orange HTML */
-.progress.css { width: 65%; background: #1572B6; }   /* Bleu CSS */
-.progress.php { width: 15%; background: #777BB3; }   /* Violet PHP */
+.progress.css { width: 65%; background: #264de4; }   /* Bleu CSS */
+.progress.php { width: 30%; background: #777BB3; }   /* Violet PHP */
 .progress.c { width: 20%; background: #A8B9CC; }     /* Gris C */
-.progress.sql { width: 15%; background: #F29111; }   /* Orange SQL */
+.progress.sql { width: 30%; background: #336791; }   /* Bleu SQL */
+.progress.java {width: 15%; background: #b07219;}      /*Orange Java */
 
 .timeline {
     display: flex;
