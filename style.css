@@ -1,7 +1,6 @@
-
 hr{
     width: 30%;
-    margin: 0 left;
+    margin-left: 0;
     border: 1px solid #ABABAB;
 }
 
@@ -12,7 +11,7 @@ hr{
 }
 
 .bienvenue{
-    margin: 0px, 50px;
+    margin: 0px 50px;
 }
 
 h1 {
@@ -41,7 +40,7 @@ h1 {
     padding-top: 20px;
 }
 
-.main{
+main{
     margin-left: 240px;
     height: 100%;
     top: 0;
@@ -190,22 +189,22 @@ body.modal-open {
 
 .bts-container {
     display: flex;
-    justify-content: space-between;  /* Espacement entre les paragraphes */
-    gap: 20px;  /* Espace entre les paragraphes */
+    justify-content: space-between;  
+    gap: 20px;  
     opacity: 0;
     transform: translateY(50px); /* Déplacement vers le bas au départ */
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .bts-text {
-    width: 48%;  /* Ajustement pour occuper 50% de l'espace */
+    width: 48%;  
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     text-align: justify;
 }
 
-/* Effet d'apparition */
+
 .bts-container.show {
     opacity: 1;
     transform: translateY(0);
@@ -261,7 +260,6 @@ body.modal-open {
     border-radius: 10px;
 }
 
-/* Couleurs et largeurs des barres */
 .progress.html { width: 80%; background: #E34F26; }  /* Orange HTML */
 .progress.css { width: 65%; background: #1572B6; }   /* Bleu CSS */
 .progress.php { width: 15%; background: #777BB3; }   /* Violet PHP */
@@ -325,7 +323,6 @@ body.modal-open {
     color: #fff;
 }
 
-/* Effet d’apparition */
 .timeline-item.show {
     opacity: 1;
     transform: translateY(0);
@@ -340,7 +337,7 @@ body.modal-open {
 }
 
 .footer {
-    background-color: #47242A; /* Même couleur que la sidebar */
+    background-color: #47242A; 
     color: #ADADAD;
     padding: 20px 10px;
     text-align: center;
@@ -385,7 +382,6 @@ body.modal-open {
     justify-content: center;
 }
 
-/* Unification avec la sidebar */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -442,3 +438,11 @@ body.modal-open {
     transform: scale(1.05);
   }
   
+
+footer {
+    background-color: #47242A;
+    color: #ABABAB;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}

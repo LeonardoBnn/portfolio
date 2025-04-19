@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 🔥 Ne charge le fichier PDF qu'au premier clic
             if (!cvFrame.src || cvFrame.src === "about:blank") {
-                cvFrame.setAttribute("src", "cv-Leonardo_Bonino.pdf"); // ✅ Remplace par le chemin réel
+                cvFrame.setAttribute("src", "CV_Leonardo_Bonino.pdf"); // ✅ Remplace par le chemin réel
             }
 
             cvFrame.style.display = "block";
