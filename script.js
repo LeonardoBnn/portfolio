@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const text = "Je suis actuellement étudiant au centre de formation CFA INSTA à Paris, en première année de BTS SIO (Services Informatiques aux Organisations) avec une spécialisation en SLAM (Solutions Logicielles et Applications Métiers). Originaire d’Italie, j’ai grandi là-bas avant de m’installer en France en 2020, où j’ai exercé le métier de barman. Cette expérience m’a beaucoup appris sur moi-même et restera gravée en moi grâce aux rencontres et aux souvenirs qu’elle m’a offerts. Aujourd’hui, je suis en pleine reconversion professionnelle. Après une profonde réflexion, j’ai décidé de me tourner vers l’informatique, une passion qui m’anime depuis mon plus jeune âge. Bien que le métier de barman m’ait beaucoup apporté, j’ai ressenti le besoin d’explorer ce domaine qui me fascine tant. À travers ce site, vous découvrirez mon école, ma formation et les projets que je développe actuellement. Bonne lecture !";
+    const text = "Je suis actuellement étudiant au centre de formation CFA INSTA à Paris, en première année de BTS SIO  avec une spécialisation en SLAM. Originaire d’Italie, j’ai grandi là-bas avant de m’installer en France en 2020, où j’ai exercé le métier de barman. Cette expérience m’a beaucoup appris sur moi-même et restera gravée en moi grâce aux rencontres et aux souvenirs qu’elle m’a offerts. Aujourd’hui, je suis en pleine reconversion professionnelle. Après une profonde réflexion, j’ai décidé de me tourner vers l’informatique, une passion qui m’anime depuis mon plus jeune âge. Bien que le métier de barman m’ait beaucoup apporté, j’ai ressenti le besoin d’explorer ce domaine qui me fascine tant. À travers ce site, vous découvrirez mon école, ma formation et les projets que je développe actuellement. Bonne lecture !";
 
     let index = 0;
     const speed = 55;
@@ -82,21 +82,28 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(".timeline-item");
 
-    const revealOnScroll = () => {
-        let scrollY = window.scrollY + window.innerHeight - 50;
-
-        items.forEach((item, index) => {
-            if (item.offsetTop < scrollY && !item.classList.contains("visible")) {
-                item.classList.add("visible");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting && !entry.target.classList.contains("visible")) {
+                entry.target.classList.add("visible");
 
                 setTimeout(() => {
-                    item.style.opacity = 1;
-                    item.style.transform = "translateY(0)";
-                }, index * 5000); // Ajuste la cadence (500ms entre chaque élément)
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = "translateY(0)";
+                }, index * 4000);
+
+                observer.unobserve(entry.target); // Stop observer une fois visible
             }
         });
-    };
+    }, {
+        threshold: 0.1 // Détecte quand 10% de l'élément est visible
+    });
 
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Exécute une première vérification si des éléments sont déjà visibles au chargement
+    items.forEach(item => {
+        observer.observe(item);
+    });
+});
+
+document.querySelectorAll('.timeline-item').forEach((item, index) => {
+    item.classList.add(index % 2 === 0 ? 'left' : 'right');
 });
