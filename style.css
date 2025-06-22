@@ -394,6 +394,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items:center;
 }
 .card {
     background-color: var(--main-card-bg);
