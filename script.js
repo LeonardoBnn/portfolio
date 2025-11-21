@@ -1,109 +1,131 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const text = "Je suis actuellement étudiant au centre de formation CFA INSTA à Paris, en première année de BTS SIO  avec une spécialisation en SLAM. Originaire d’Italie, j’ai grandi là-bas avant de m’installer en France en 2020, où j’ai exercé le métier de barman. Cette expérience m’a beaucoup appris sur moi-même et restera gravée en moi grâce aux rencontres et aux souvenirs qu’elle m’a offerts. Aujourd’hui, je suis en pleine reconversion professionnelle. Après une profonde réflexion, j’ai décidé de me tourner vers l’informatique, une passion qui m’anime depuis mon plus jeune âge. Bien que le métier de barman m’ait beaucoup apporté, j’ai ressenti le besoin d’explorer ce domaine qui me fascine tant. À travers ce site, vous découvrirez mon école, ma formation et les projets que je développe actuellement. Bonne lecture !";
+document.addEventListener("DOMContentLoaded", () => {
+    initTypingEffect();
+    initCvModal();
+    initBtsReveal();
+    initTimelineReveal();
+    initTimelineSides();
+});
 
+function initTypingEffect() {
+    const typedTextElement = document.getElementById("typed-text");
+    if (!typedTextElement) return;
+
+    const text = "Je suis actuellement étudiant au centre de ...t les projets que je développe actuellement. Bonne lecture !";
     let index = 0;
     const speed = 55;
-    const typedTextElement = document.getElementById("typed-text");
 
-    if (typedTextElement) { // ✅ Vérifier que l'élément existe
-        function typeText() {
-            if (index < text.length) {
-                typedTextElement.innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeText, speed);
-            }
+    const typeText = () => {
+        if (index < text.length) {
+            typedTextElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeText, speed);
         }
+    };
 
-        const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(
+        entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && index === 0) {
                     typedTextElement.style.opacity = 1;
                     typeText();
                 }
             });
-        }, { threshold: 0.5 });
+        },
+        { threshold: 0.5 }
+    );
 
-        observer.observe(typedTextElement);
-    }
-});
+    observer.observe(typedTextElement);
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+function initCvModal() {
     const cvButton = document.getElementById("cvButton");
     const cvModal = document.getElementById("cvModal");
     const cvFrame = document.getElementById("cvFrame");
-    const closeButton = document.querySelector(".close");
+    const closeButton = cvModal ? cvModal.querySelector(".close") : null;
 
-    if (cvButton && cvModal && cvFrame) {
-        // 🔥 Supprimer tout src pour éviter l'ouverture automatique
-        cvFrame.removeAttribute("src");
+    if (!cvButton || !cvModal || !cvFrame || !closeButton) return;
 
-        cvButton.addEventListener("click", function (event) {
-            event.preventDefault(); // 🚫 Bloque toute navigation automatique
-            event.stopPropagation(); // 🚫 Empêche la propagation du clic
+    // Évite le chargement automatique du PDF
+    cvFrame.removeAttribute("src");
 
-            // 🔥 Ne charge le fichier PDF qu'au premier clic
-            if (!cvFrame.src || cvFrame.src === "about:blank") {
-                cvFrame.setAttribute("src", "CV_Leonardo_Bonino.pdf"); // ✅ Remplace par le chemin réel
-            }
+    cvButton.addEventListener("click", event => {
+        event.preventDefault();
 
-            cvFrame.style.display = "block";
-            cvModal.style.display = "flex";
-        });
-    }
+        if (!cvFrame.getAttribute("src")) {
+            cvFrame.setAttribute("src", "CV_Leonardo_Bonino.pdf");
+        }
 
-    if (closeButton && cvModal) {
-        closeButton.addEventListener("click", function () {
+        cvModal.style.display = "flex";
+    });
+
+    closeButton.addEventListener("click", () => {
+        cvModal.style.display = "none";
+    });
+
+    cvModal.addEventListener("click", event => {
+        if (event.target === cvModal) {
             cvModal.style.display = "none";
-        });
+        }
+    });
+}
 
-        window.addEventListener("click", function (event) {
-            if (event.target === cvModal) {
-                cvModal.style.display = "none";
-            }
-        });
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+function initBtsReveal() {
     const btsContainer = document.querySelector(".bts-container");
+    if (!btsContainer) return;
 
-    function handleScroll() {
+    const handleScroll = () => {
         const scrollPosition = window.scrollY + window.innerHeight;
         const elementPosition = btsContainer.offsetTop;
 
         if (scrollPosition > elementPosition + 100) {
             btsContainer.classList.add("show");
+            // Une fois affiché, plus besoin d’écouter le scroll
+            window.removeEventListener("scroll", handleScroll);
         }
-    }
+    };
 
     window.addEventListener("scroll", handleScroll);
-});
+    // Si la section est déjà visible au chargement
+    handleScroll();
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+function initTimelineReveal() {
     const items = document.querySelectorAll(".timeline-item");
+    if (!items.length) return;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting && !entry.target.classList.contains("visible")) {
-                entry.target.classList.add("visible");
+    const STAGGER_DELAY = 200; // ms entre chaque item
 
-                setTimeout(() => {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = "translateY(0)";
-                }, index * 4000);
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains("visible")) {
+                    entry.target.classList.add("visible");
 
-                observer.unobserve(entry.target); // Stop observer une fois visible
-            }
-        });
-    }, {
-        threshold: 0.1 // Détecte quand 10% de l'élément est visible
-    });
+                    const index = Number(entry.target.dataset.index || 0);
 
-    items.forEach(item => {
+                    setTimeout(() => {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = "translateY(0)";
+                    }, index * STAGGER_DELAY);
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    items.forEach((item, index) => {
+        item.dataset.index = index;
         observer.observe(item);
     });
-});
+}
 
-document.querySelectorAll('.timeline-item').forEach((item, index) => {
-    item.classList.add(index % 2 === 0 ? 'left' : 'right');
-});
+function initTimelineSides() {
+    const items = document.querySelectorAll(".timeline-item");
+    if (!items.length) return;
+
+    items.forEach((item, index) => {
+        item.classList.add(index % 2 === 0 ? "left" : "right");
+    });
+}
