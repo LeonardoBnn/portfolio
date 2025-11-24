@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Leonardo Bonino</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/8419f108ca.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <main>
+        <!-- WRAPPER ENTREPRISE -->
+        <section class="enterprise">
+
+            <!-- HERO (réutilise tes classes .enterprise-hero...) -->
+            <div class="enterprise-hero">
+                <img src="img/sncf-surete.jpg" alt="SNCF Sûreté" class="enterprise-hero-img">
+                <div class="enterprise-hero-overlay"></div>
+
+                <div class="enterprise-hero-content">
+                    <div>
+                        <h1 class="enterprise-title">SNCF Sûreté</h1>
+                        <p class="enterprise-subtitle">
+                            Sécurité des voyageurs, des agents et des infrastructures ferroviaires :
+                            un environnement exigeant où les systèmes d'information soutiennent
+                            au quotidien l’action des équipes opérationnelles.
+                        </p>
+                        <div class="enterprise-badges">
+                            <span class="badge">
+                                <i>🚆</i> Sécurité ferroviaire
+                            </span>
+                            <span class="badge">
+                                <i>🖥️</i> Systèmes d'information
+                            </span>
+                            <span class="badge badge-muted">
+                                <i>🎓</i> Alternance BTS SIO SLAM
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1. PRESENTATION SNCF SURETE -->
+            <section id="sncf-surete" class="enterprise-section reveal-on-scroll">
+                <h2 class="enterprise-section-title">Présentation de SNCF Sûreté</h2>
+                <p class="enterprise-section-intro">
+                    SNCF Sûreté est l’entité dédiée à la 
+                    <strong>prévention des risques</strong>, à la 
+                    <strong>protection des personnes et des biens</strong> 
+                    et au <strong>maintien d’un haut niveau de sécurité</strong> 
+                    dans l’ensemble de l’écosystème SNCF.
+                    Les équipes, présentes sur le terrain comme en support, s’appuient
+                    sur des outils numériques pour surveiller, analyser et agir rapidement.
+                </p>
+
+                <div class="enterprise-grid">
+                    <article class="enterprise-card">
+                        <h3 class="enterprise-card-title">Mission principale</h3>
+                        <p class="enterprise-card-text">
+                            Assurer la sûreté des voyageurs, des agents et des infrastructures,
+                            en anticipant les risques et en mettant en œuvre des actions adaptées
+                            sur le terrain.
+                        </p>
+                    </article>
+
+                    <article class="enterprise-card">
+                        <h3 class="enterprise-card-title">Acteurs opérationnels</h3>
+                        <p class="enterprise-card-text">
+                            Agents de sûreté, superviseurs, encadrement et équipes de pilotage
+                            utilisent les systèmes d’information pour suivre les incidents,
+                            coordonner les interventions et partager l’information.
+                        </p>
+                    </article>
+
+                    <article class="enterprise-card">
+                        <h3 class="enterprise-card-title">Enjeux quotidiens</h3>
+                        <p class="enterprise-card-text">
+                            Réactivité, fiabilité des données, traçabilité et coopération
+                            entre métiers sont au cœur de la performance de SNCF Sûreté.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 2. ENJEUX DES SYSTEMES INFORMATIQUES AVEC ONGLET -->
+            <section id="enjeux" class="enterprise-section reveal-on-scroll">
+                <div class="enterprise-section-header">
+                    <div>
+                        <h2 class="enterprise-section-title">Les enjeux des systèmes informatiques</h2>
+                        <p class="enterprise-section-intro">
+                            Les systèmes d’information de SNCF Sûreté sont des 
+                            <strong>outils critiques</strong> qui soutiennent directement
+                            la capacité des équipes opérationnelles à <strong>agir vite</strong>
+                            et à <strong>prendre les bonnes décisions</strong>.
+                        </p>
+                    </div>
+
+                    <div class="enterprise-tabs" role="tablist">
+                        <button class="tab-button tab-active" data-tab="metier" role="tab">
+                            Enjeux métier
+                        </button>
+                        <button class="tab-button" data-tab="technique" role="tab">
+                            Enjeux techniques
+                        </button>
+                        <button class="tab-button" data-tab="humain" role="tab">
+                            Enjeux humains
+                        </button>
+                    </div>
+                </div>
+
+                <div class="enterprise-tab-panels">
+                    <!-- Panel MÉTIER -->
+                    <div class="tab-panel tab-panel-active" data-panel="metier">
+                        <div class="enterprise-grid">
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Fiabilité de l’information</h3>
+                                <p class="enterprise-card-text">
+                                    Les outils doivent fournir une information exacte et à jour
+                                    pour analyser rapidement les situations de terrain
+                                    et prioriser les actions.
+                                </p>
+                            </article>
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Continuité de service</h3>
+                                <p class="enterprise-card-text">
+                                    Les applications doivent rester disponibles, y compris en période
+                                    de forte activité, pour ne pas freiner l’action des équipes de sûreté.
+                                </p>
+                            </article>
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Traçabilité</h3>
+                                <p class="enterprise-card-text">
+                                    Les actions (signalement, intervention, décision) sont tracées
+                                    afin de faciliter le suivi, le reporting et l’amélioration continue.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Panel TECHNIQUE -->
+                    <div class="tab-panel" data-panel="technique">
+                        <div class="enterprise-grid">
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Qualité logicielle</h3>
+                                <p class="enterprise-card-text">
+                                    Des campagnes de tests structurées garantissent la stabilité
+                                    des applications et limitent les régressions lors des évolutions.
+                                </p>
+                            </article>
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Performance &amp; sécurité</h3>
+                                <p class="enterprise-card-text">
+                                    Les solutions doivent être performantes, sécurisées
+                                    et conformes aux exigences internes de la SNCF
+                                    et aux bonnes pratiques du numérique.
+                                </p>
+                            </article>
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Évolutivité</h3>
+                                <p class="enterprise-card-text">
+                                    Les systèmes d’information doivent pouvoir intégrer de nouvelles
+                                    fonctionnalités tout en restant maintenables et lisibles
+                                    pour les équipes techniques.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Panel HUMAIN -->
+                    <div class="tab-panel" data-panel="humain">
+                        <div class="enterprise-grid">
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Adoption par les utilisateurs</h3>
+                                <p class="enterprise-card-text">
+                                    Un outil efficace est un outil compris, adopté et utilisé.
+                                    L’ergonomie et la simplicité sont donc essentielles.
+                                </p>
+                            </article>
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Accompagnement du changement</h3>
+                                <p class="enterprise-card-text">
+                                    Chaque évolution logicielle doit être expliquée, testée et déployée
+                                    en tenant compte du quotidien des équipes.
+                                </p>
+                            </article>
+                            <article class="enterprise-card">
+                                <h3 class="enterprise-card-title">Retour d’expérience</h3>
+                                <p class="enterprise-card-text">
+                                    Les retours des utilisateurs alimentent les améliorations des outils
+                                    dans une logique de co-construction.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. MON RÔLE : TESTS & RECETTE -->
+            <section id="role" class="enterprise-section reveal-on-scroll">
+                <h2 class="enterprise-section-title">Mon rôle : tests &amp; recette de logiciels</h2>
+                <p class="enterprise-section-intro">
+                    En tant qu’<strong>assistant tests &amp; recettes</strong>, 
+                    j’interviens dans la phase qui permet de s’assurer
+                    qu’une application répond réellement aux besoins des utilisateurs
+                    avant sa mise en production.
+                </p>
+
+                <div class="enterprise-role-layout">
+                    <div class="enterprise-role-steps">
+                        <div class="enterprise-role-step">
+                            <h3>1. Compréhension du besoin</h3>
+                            <p>
+                                Analyse des spécifications fonctionnelles et techniques,
+                                prise en compte du contexte métier de la sûreté ferroviaire
+                                et des usages réels sur le terrain.
+                            </p>
+                        </div>
+                        <div class="enterprise-role-step">
+                            <h3>2. Conception des scénarios de test</h3>
+                            <p>
+                                Rédaction de cas de test couvrant les parcours clés :
+                                création et suivi d’incidents, consultation d’informations,
+                                actions de pilotage, etc.
+                            </p>
+                        </div>
+                        <div class="enterprise-role-step">
+                            <h3>3. Exécution &amp; qualification</h3>
+                            <p>
+                                Exécution des tests, identification des anomalies,
+                                qualification précise des dysfonctionnements
+                                et suivi de leur correction avec les équipes de développement.
+                            </p>
+                        </div>
+                        <div class="enterprise-role-step">
+                            <h3>4. Recette utilisateur</h3>
+                            <p>
+                                Participation à la recette avec les métiers,
+                                validation des évolutions et vérification que la solution
+                                répond aux attentes des équipes opérationnelles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <aside class="enterprise-role-aside enterprise-card">
+                        <h3 class="enterprise-card-title">Compétences mobilisées</h3>
+                        <ul class="enterprise-list">
+                            <li>Analyse fonctionnelle et compréhension métier</li>
+                            <li>Rédaction de cas de test et plans de recette</li>
+                            <li>Utilisation d’outils de suivi des anomalies</li>
+                            <li>Communication avec développeurs, chefs de projet et métiers</li>
+                            <li>Rigueur, sens du détail et esprit critique</li>
+                        </ul>
+
+                        <div class="enterprise-more">
+                            <a href="index.html#projets" class="enterprise-btn">
+                                Voir mes projets liés à la qualité logicielle
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- 4. CTA -->
+            <section class="enterprise-section reveal-on-scroll">
+                <div class="enterprise-cta">
+                    <div>
+                        <h2 class="enterprise-section-title">Relier théorie et pratique</h2>
+                        <p class="enterprise-section-intro">
+                            Cette expérience chez SNCF Sûreté me permet de relier mes 
+                            <strong>compétences de développement en BTS SIO SLAM</strong> 
+                            à des enjeux concrets de sécurité, de qualité logicielle
+                            et de service aux utilisateurs.
+                        </p>
+                    </div>
+                    <a href="index.html#contact" class="enterprise-btn">
+                        Me contacter
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Contacts</h3>
+                        <p>Email : <a href="mailto:boninoleonardo@gmail.com">boninoleonardo@gmail.com</a></p>
+                        <p>Téléphone : <a href="tel:+33749034251">+33 7 49 03 42 51</a></p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Réseaux Sociaux</h3>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/leonardo-bonino-b71078244" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/leonardo_bonino_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://github.com/LeonardoBnn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Adresse</h3>
+                        <p>Rue de Reuilly, Paris, France</p>
+                    </div>
+                </div>
+            </footer>
+    </main>
+</body>
+</html>

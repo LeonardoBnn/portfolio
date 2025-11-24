@@ -631,3 +631,172 @@ main {
         transition: none !important; 
     }
 }
+
+
+/* =========================
+   PAGE ENTREPRISE - SECTIONS INTERNES
+   (complément du bloc .enterprise existant)
+   ========================= */
+
+.enterprise-section {
+    margin-top: 32px;
+}
+
+.enterprise-section-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: var(--main-light);
+}
+
+.enterprise-section-intro {
+    max-width: 780px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    color: var(--main-grey);
+}
+
+/* Header de section avec onglets */
+.enterprise-section-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Onglets enjeux */
+.enterprise-tabs {
+    display: inline-flex;
+    gap: 4px;
+    background: var(--main-card-bg);
+    padding: 4px;
+    border-radius: 999px;
+    box-shadow: var(--main-shadow);
+}
+
+.tab-button {
+    border: none;
+    background: transparent;
+    color: var(--main-light);
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.tab-button:hover {
+    transform: translateY(-1px);
+}
+
+.tab-active {
+    background-color: var(--main-accent);
+    color: #fff;
+}
+
+/* Panels d'onglets */
+.enterprise-tab-panels {
+    margin-top: 16px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel-active {
+    display: block;
+}
+
+/* Mise en page du rôle */
+.enterprise-role-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+    gap: 24px;
+    align-items: flex-start;
+    margin-top: 12px;
+}
+
+.enterprise-role-steps {
+    display: grid;
+    gap: 14px;
+}
+
+.enterprise-role-step {
+    background: var(--main-card-bg);
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: var(--main-shadow);
+    backdrop-filter: blur(6px);
+}
+
+.enterprise-role-step h3 {
+    margin-bottom: 6px;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.enterprise-role-step p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--main-light);
+}
+
+/* Aside de compétences : réutilise enterprise-card */
+.enterprise-role-aside {
+    position: sticky;
+    top: 30px;
+}
+
+/* CTA de fin */
+.enterprise-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--main-card-bg);
+    border-radius: 16px;
+    padding: 18px 20px;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: var(--main-shadow);
+    backdrop-filter: blur(7px);
+}
+
+/* Animation "reveal on scroll" */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive spécifique entreprise */
+@media (max-width: 900px) {
+    .enterprise-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .enterprise-role-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .enterprise-role-aside {
+        position: static;
+    }
+
+    .enterprise-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .enterprise-section-title {
+        font-size: 1.4rem;
+    }
+}

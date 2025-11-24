@@ -129,3 +129,76 @@ function initTimelineSides() {
         item.classList.add(index % 2 === 0 ? "left" : "right");
     });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    /* =========================
+       TABS ENJEUX
+       ========================= */
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const target = button.getAttribute('data-tab');
+
+            // Active bouton
+            tabButtons.forEach(btn => btn.classList.remove('tab-active'));
+            button.classList.add('tab-active');
+
+            // Affiche / masque les panels
+            tabPanels.forEach(panel => {
+                if (panel.getAttribute('data-panel') === target) {
+                    panel.classList.add('tab-panel-active');
+                } else {
+                    panel.classList.remove('tab-panel-active');
+                }
+            });
+        });
+    });
+
+    /* =========================
+       REVEAL ON SCROLL
+       ========================= */
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        revealElements.forEach(el => observer.observe(el));
+    } else {
+        // Fallback simple si IntersectionObserver n'est pas supporté
+        revealElements.forEach(el => el.classList.add('reveal-visible'));
+    }
+
+    /* =========================
+       SMOOTH SCROLL POUR ANCRES
+       ========================= */
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId.length > 1) {
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    const offsetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - 80;
+
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+});
