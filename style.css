@@ -223,12 +223,12 @@ main {
     color: white;
     border-radius: 10px;
 }
-.progress.html { width: 80%; background: #E34F26; }
-.progress.css { width: 65%; background: #264de4; }
-.progress.php { width: 30%; background: #777BB3; }
-.progress.c { width: 20%; background: #A8B9CC; }
-.progress.sql { width: 30%; background: #336791; }
-.progress.java { width: 15%; background: #b07219; }
+.progress.html { width: 70%; background: #E34F26; }
+.progress.css { width: 45%; background: #264de4; }
+.progress.php { width: 35%; background: #777BB3; }
+.progress.c { width: 15%; background: #A8B9CC; }
+.progress.sql { width: 35%; background: #336791; }
+.progress.java { width: 20%; background: #b07219; }
 
 /* ========== TIMELINE ========== */
 .timeline {
