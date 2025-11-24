@@ -10,7 +10,7 @@ function initTypingEffect() {
     const typedTextElement = document.getElementById("typed-text");
     if (!typedTextElement) return;
 
-    const text = "Je suis actuellement étudiant au centre de ...t les projets que je développe actuellement. Bonne lecture !";
+const text = "Je suis actuellement étudiant au centre de formation CFA INSTA à Paris, en première année de BTS SIO  avec une spécialisation en SLAM. Originaire d’Italie, j’ai grandi là-bas avant de m’installer en France en 2020, où j’ai exercé le métier de barman. Cette expérience m’a beaucoup appris sur moi-même et restera gravée en moi grâce aux rencontres et aux souvenirs qu’elle m’a offerts. Aujourd’hui, je suis en pleine reconversion professionnelle. Après une profonde réflexion, j’ai décidé de me tourner vers l’informatique, une passion qui m’anime depuis mon plus jeune âge. Bien que le métier de barman m’ait beaucoup apporté, j’ai ressenti le besoin d’explorer ce domaine qui me fascine tant. À travers ce site, vous découvrirez mon école, ma formation et les projets que je développe actuellement. Bonne lecture !";
     let index = 0;
     const speed = 55;
 
