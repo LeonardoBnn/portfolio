@@ -52,7 +52,7 @@ function initCvModal() {
         event.preventDefault();
 
         if (!cvFrame.getAttribute("src")) {
-            cvFrame.setAttribute("src", "CV_Leonardo_Bonino.pdf");
+            cvFrame.setAttribute("src", "CV_Leonardo_Bonino_ESGI.pdf");
         }
 
         cvModal.style.display = "flex";
