@@ -1024,3 +1024,195 @@ main {
     border: 1px solid #ff6b6b;
     color: var(--main-light);
 }
+
+/* ============================================
+   AMÉLIORATIONS RESPONSIVE GLOBALES (MOBILE)
+   À COLLER EN BAS DU FICHIER
+   ============================================ */
+
+/* Titres & texte plus fluides */
+h1 {
+    font-size: clamp(1.8rem, 4vw, 3.1rem);
+    margin: clamp(20px, 6vw, 50px) 0;
+    text-align: center;
+}
+
+#typed-text {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+}
+
+/* Nav : évite les débordements et rend le tout scrollable si besoin */
+.nav-bar {
+    overflow-y: auto;
+}
+
+/* ====== TABLETTES & SMARTPHONES (<= 900px) ====== */
+@media (max-width: 900px) {
+
+    /* La nav devient une barre haute sticky */
+    .nav-bar { 
+        position: sticky; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: auto; 
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+        justify-content: flex-start; 
+        padding: 8px 12px;
+        gap: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+        z-index: 20;
+    }
+
+    .img-leo { 
+        width: 60px; 
+        height: 60px; 
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .nav-bar a {
+        margin: 0;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    main { 
+        margin-left: 0; 
+        padding-top: 70px; /* pour ne pas passer sous la nav */
+    }
+}
+
+/* ====== PETITS ÉCRANS (<= 768px) ====== */
+@media (max-width: 768px) {
+
+    /* Mise en colonne des blocs BTS */
+    .bts-container { 
+        flex-direction: column; 
+        gap: 16px;
+    }
+    .bts-text { 
+        width: 100%; 
+    }
+
+    /* Skills en pleine largeur */
+    .skills-container { 
+        width: 100%; 
+        max-width: 600px; 
+        margin: 30px auto; 
+    }
+
+    /* Timeline : passe en une seule colonne */
+    .timeline {
+        padding-inline: 16px;
+    }
+
+    .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-content { 
+        max-width: 100%; 
+        margin-left: 40px; 
+        text-align: left; 
+    }
+
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+        text-align: left;
+        margin: 0 0 0 40px;
+    }
+
+    .timeline-date {
+        left: 40px;
+        transform: none;
+    }
+
+    /* Cartes projets en colonne */
+    .projects-container { 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    /* Modale CV un peu plus petite pour les petits écrans */
+    .modal-content {
+        width: 95%;
+        height: 85vh;
+    }
+
+    .cv {
+        padding: 30px 10px;
+    }
+}
+
+/* ====== TRÈS PETITS ÉCRANS (<= 480px) ====== */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .img-leo { 
+        width: 50px; 
+        height: 50px; 
+    }
+
+    .moncv { 
+        font-size: 14px; 
+        padding: 7px 12px;
+    }
+
+    .footer-content { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    /* Section entreprise un peu plus compacte */
+    .enterprise { 
+        padding-inline: 10px; 
+    }
+
+    .enterprise-hero-img { 
+        height: 220px; 
+    }
+
+    .enterprise-cta { 
+        padding: 14px 16px; 
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    /* Page contact : titres + cartes adaptés */
+    .contact-form-section h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .contact-card {
+        padding: 18px 16px;
+    }
+
+    .back-button-contact {
+        top: 10px;
+        left: 10px;
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
