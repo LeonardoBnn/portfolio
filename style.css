@@ -31,12 +31,12 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     color: var(--main-grey);
-    margin: 50px;
+    margin: 20px;
     animation: titlePulse 5s ease infinite;
 }
 @keyframes titlePulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    0%, 100% { transform: scale(0.9); }
+    50% { transform: scale(1); }
 }
 #typed-text {
     font-size: 18px;
