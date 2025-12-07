@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="contact-page">
 
     <!-- Bouton retour en haut à gauche -->
-    <a href="../index.html" class="back-button-contact">← Retour au site</a>
+    <a href="../index.php" class="back-button-contact">← Retour au site</a>
 
     <main>
         <section class="contact-form-section">

@@ -19,8 +19,8 @@
             <a href="#monentreprise"><i class="fa-solid fa-briefcase"></i>&nbsp; Mon entreprise</a>
             <a href="#parcours"><i class="fa-solid fa-book"></i>&ensp;Parcours</a>
             <a href="#certification"><i class="fa-solid fa-certificate"></i>&ensp;Certifications</a>
-            <a href="#veille"><i class="fa-solid fa-arrows-spin"></i>&nbsp; Veille technologique</a>
             <a href="#projets"><i class="fa-solid fa-hammer"></i>&nbsp; Projets</a>
+            <a href="#veille"><i class="fa-solid fa-arrows-spin"></i>&nbsp; Veille technologique</a>
             <a href="#contacts"><i class="fa-regular fa-address-book"></i>&nbsp; Contacts</a>
         </nav>
     </header>
@@ -347,16 +347,108 @@
         <br><br>
         <h2>Veille Technologique</h2>
         <br><hr>
-        <section class="veille-section">            
+        <section id="veille" class="veille-section">            
             <div class="veille-intro">
                 <p>
                     La veille technologique consiste à se tenir informé des évolutions dans le domaine informatique. Elle me permet d’adapter mes compétences, de suivre les bonnes pratiques, et de rester à jour sur des sujets essentiels pour mon apprentissage.
                 </p>
+                <p>
+                    Ma veille technologique se concentre sur l'écosystème <strong>PHP</strong>. Je surveille activement les évolutions du langage (versions 8.x), les améliorations de sécurité, ainsi que les mises à jour majeures des frameworks les plus utilisés comme <strong>Symfony</strong> et <strong>Laravel</strong>.
+                </p>
             </div>
 
-            <div class="certification-card coming-soon">
-                <p>🎓 Bientôt disponible !</p>
-                <small>Vous pourrez prochainement découvrir ma méthode de veille ainsi que les différents sujets que j’aborde</small>
+            <div class="veille-tools">
+                <a href="https://blog.jetbrains.com/phpstorm/" target="_blank" style="text-decoration:none;">
+                    <span><i class="fa-solid fa-laptop-code"></i> JetBrains Blog</span>
+                </a>
+
+                <a href="https://stackoverflow.com/questions/tagged/php+security" target="_blank" style="text-decoration:none;">
+                    <span><i class="fa-brands fa-stack-overflow"></i> StackOverflow</span>
+                </a>
+
+                <a href="https://stitcher.io/" target="_blank" style="text-decoration:none;">
+                    <span><i class="fa-solid fa-book-open"></i> Stitcher.io</span>
+                </a>
+            </div>
+
+            <div class="veille-grid">
+                
+                <article class="veille-card">
+                    <div class="veille-icon">
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                    <div class="veille-content">
+                        <h3>Les nouveautés PHP 8.x</h3>
+                        <p>Analyse des dernières versions (8.3 et 8.4) : typage plus strict, amélioration des classes <em>Readonly</em>, et nouvelles fonctions comme <code>json_validate()</code>.</p>
+                        
+                        <div class="veille-tags">
+                            <span class="tag">Performance</span>
+                            <span class="tag">JIT Compiler</span>
+                        </div>
+
+                        <a href="view/veille-detail.php?sujet=php" class="veille-btn">
+                            Voir le dossier <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="veille-card">
+                    <div class="veille-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="veille-content">
+                        <h3>PDO & SQL</h3>
+                        <p>Maîtrise de l'interface d'abstraction de données. Focus sur les requêtes préparées, les transactions et la gestion des exceptions.</p>
+                        
+                        <div class="veille-tags">
+                            <span class="tag">SQL Injection</span>
+                            <span class="tag">Transactions</span>
+                        </div>
+
+                        <a href="view/veille-detail.php?sujet=pdo" class="veille-btn">
+                            Voir le dossier <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="veille-card">
+                    <div class="veille-icon">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <div class="veille-content">
+                        <h3>Sécurité Web</h3>
+                        <p>Veille sur les vulnérabilités courantes (OWASP) dans les applications PHP. Utilisation des outils d'analyse statique comme PHPStan.</p>
+                        
+                        <div class="veille-tags">
+                            <span class="tag">OWASP</span>
+                            <span class="tag">PHPStan</span>
+                        </div>
+
+                        <a href="view/veille-detail.php?sujet=securite" class="veille-btn">
+                            Voir le dossier <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="veille-card">
+                    <div class="veille-icon">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <div class="veille-content">
+                        <h3>PHPMailer & SMTP</h3>
+                        <p>Veille sur l'envoi d'emails : authentification <strong>OAuth2</strong> et conformité avec les normes <strong>SPF/DKIM</strong>.</p>
+                        <br>
+                        <div class="veille-tags">
+                            <span class="tag">SMTP</span>
+                            <span class="tag">Délivrabilité</span>
+                        </div>
+
+                        <a href="view/veille-detail.php?sujet=mailer" class="veille-btn">
+                            Voir le dossier <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
             </div>
         </section>
 

@@ -34,10 +34,7 @@ h1 {
     margin: 20px;
     animation: titlePulse 5s ease infinite;
 }
-@keyframes titlePulse {
-    0%, 100% { transform: scale(0.9); }
-    50% { transform: scale(1); }
-}
+
 #typed-text {
     font-size: 18px;
     white-space: pre-wrap;
@@ -1215,4 +1212,150 @@ h1 {
         font-size: 13px;
         padding: 6px 12px;
     }
+}
+
+/* ========== VEILLE TECH (Mise à jour) ========== */
+
+/* Bandeau des outils (Feedly, etc.) */
+.veille-tools {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.veille-tools span {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: var(--main-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.veille-tools span:hover {
+    background: var(--main-accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Grille des cartes */
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 10px;
+}
+
+/* Style des cartes de veille */
+.veille-card {
+    background: var(--main-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 25px;
+    backdrop-filter: blur(7px);
+    box-shadow: var(--main-shadow);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.veille-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--main-accent);
+}
+
+/* Icône en haut de la carte */
+.veille-icon {
+    font-size: 40px;
+    color: var(--main-light);
+    margin-bottom: 15px;
+}
+
+.veille-content h3 {
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.veille-content p {
+    font-size: 0.95em;
+    color: var(--main-light);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Tags (étiquettes) en bas de carte */
+.veille-tags {
+    margin-top: auto; /* Pousse les tags vers le bas */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--main-grey);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive spécifique */
+@media (max-width: 600px) {
+    .veille-grid {
+        grid-template-columns: 1fr;
+    }
+    .veille-tools {
+        gap: 10px;
+    }
+    .veille-tools span {
+        font-size: 0.8em;
+    }
+}
+
+/* Bouton "Voir le dossier" dans les cartes de veille */
+.veille-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px; /* Espace entre les tags et le bouton */
+    padding: 10px 20px;
+    background-color: var(--main-btn);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
+    width: 100%; /* Le bouton prend toute la largeur pour un aspect propre */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.2s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.veille-btn:hover {
+    background-color: var(--main-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.veille-btn i {
+    font-size: 0.8em;
+    transition: transform 0.3s;
+}
+
+.veille-btn:hover i {
+    transform: translateX(4px); /* Petite animation de la flèche au survol */
 }
