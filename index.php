@@ -318,7 +318,17 @@
                         <h3>E-Enseignement</h3>
                         <p>Création d'un site de e-enseignement pour le CFA-INSTA.</p>
                         <p class="technologies">Html et CSS</p>
-                        <a href="https://docs.google.com/presentation/d/1NT41lHqRkGm5MV2FrqArbkI0T5WwM0v_Y-G1B9eeyws/preview" target="_blank" class="btn">Voir le projet</a>
+                        <a href="https://docs.google.com/presentation/d/1GBg02V57BfiUCThv6oaUY7md01ET4zX1ZR4zJ1mMjpg/preview" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/phpMailer.PNG" alt="Page de connexion MedInfo">
+                    <div class="card-content">
+                        <h3>PHPMailer</h3>
+                        <p>Installation et configuration de la bibliothèque PHPMailer</p>
+                        <p class="technologies">PHP</p>
+                        <a href="https://www.canva.com/design/DAG63oRT-jw/Hu_zBoNBbxKLCufE39FS2w/view?utm_content=DAG63oRT-jw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha41af5451e/preview" target="_blank" class="btn">Voir le projet</a>
                     </div>
                 </div>
 
@@ -338,7 +348,17 @@
                         <h3>Travel Casee</h3>
                         <p>Création d'une boutique en ligne pour la start-up TravelCase.</p>
                         <p class="technologies">Shopify</p>
-                        <a href="https://docs.google.com/presentation/d/172-FZ1QRETqnLnFjrHs_ylX7sWhxGlAtP6dRJ499584/preview" target="_blank" class="btn">Voir le projet</a>
+                        <a href="https://www.canva.com/design/DAGrFHy9Bq8/k7tobEpSRi5US6xDMig_cw/edit?utm_content=DAGrFHy9Bq8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/MedInfo.PNG" alt="Page de connexion MedInfo">
+                    <div class="card-content">
+                        <h3>MedInfo</h3>
+                        <p>Création d'une application web pour la gestion de rdv du centre médical Ramsay.</p>
+                        <p class="technologies">PHP SQL HTML CSS</p>
+                        <a href="https://docs.google.com/presentation/d/1GBg02V57BfiUCThv6oaUY7md01ET4zX1ZR4zJ1mMjpg/preview" target="_blank" class="btn">Voir le projet</a>
                     </div>
                 </div>
 
@@ -413,15 +433,15 @@
 
                 <article class="veille-card">
                     <div class="veille-icon">
-                        <i class="fa-solid fa-shield-virus"></i>
+                        <i class="fa-solid fa-code-branch"></i>
                     </div>
                     <div class="veille-content">
-                        <h3>Sécurité Web</h3>
-                        <p>Veille sur les vulnérabilités courantes (OWASP) dans les applications PHP. Utilisation des outils d'analyse statique comme PHPStan.</p>
+                        <h3>Sécurité Applicative PHP</h3>
+                        <p>Veille technique sur les bonnes pratiques de codage sécurisé. Focus sur la prévention des failles critiques (XSS, CSRF, Injections SQL) au sein du code.</p>
                         
                         <div class="veille-tags">
-                            <span class="tag">OWASP</span>
-                            <span class="tag">PHPStan</span>
+                            <span class="tag">Secure Coding</span>
+                            <span class="tag">XSS & SQL</span>
                         </div>
 
                         <a href="view/veille-detail.php?sujet=securite" class="veille-btn">
