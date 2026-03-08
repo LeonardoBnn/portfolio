@@ -5,7 +5,7 @@ $configs = [
     'php' => [
         'titre' => 'Les dernières actualités de PHP',
         // On passe sur le tag PHP de Dev.to : très actif et pas bloqué
-        'url'   => 'https://stitcher.io/rss', 
+        'url' => 'https://php.watch/feed/php-changes.xml',        
         'icon'  => 'fa-brands fa-php',
         'desc'  => 'Veille communautaire sur les dernières pratiques et versions de PHP.'
     ],

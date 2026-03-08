@@ -31,12 +31,8 @@
             <br><h1>Bienvenue sur le portfolio de Leonardo Bonino</h1>
             </section>
             <br><br>
-        <section id="apropos" class="apropos">
-            <h2>À propos de moi :</h2>
-            <br>
-            <hr>
-            <br>
-            <p id="typed-text"></p>
+        
+            
             <br>
             <br>
             <div class="cv">
@@ -51,8 +47,9 @@
                     <iframe id="cvFrame" width="100%" height="600px" ></iframe>
                 </div>
             </div>
-
+            <br><br><br> <br><br>
             <br>
+            <section id="apropos" class="apropos">
             <br>
             <h2>À propos du BTS SIO :</h2>
             <br>
@@ -373,7 +370,7 @@
                     La veille technologique consiste à se tenir informé des évolutions dans le domaine informatique. Elle me permet d’adapter mes compétences, de suivre les bonnes pratiques, et de rester à jour sur des sujets essentiels pour mon apprentissage.
                 </p>
                 <p>
-                    Ma veille technologique se concentre sur l'écosystème <strong>PHP</strong>. Je surveille activement les évolutions du langage (versions 8.x), les améliorations de sécurité, ainsi que les mises à jour majeures des frameworks les plus utilisés comme <strong>Symfony</strong> et <strong>Laravel</strong>.
+                    Ma veille technologique se concentre sur l'écosystème <strong>PHP</strong>. Je surveille activement les évolutions du langage (versions 8.x), les améliorations de sécurité, ainsi que les mises à jour majeures des librairies que j'utilise le plus comme <strong>PDO</strong> et <strong>PHPMailer</strong>.
                 </p>
             </div>
 
@@ -387,7 +384,7 @@
                 </a>
 
                 <a href="https://stitcher.io/" target="_blank" style="text-decoration:none;">
-                    <span><i class="fa-solid fa-book-open"></i> Stitcher.io</span>
+                    <span><i class="fa-solid fa-book-open"></i> PHP.Watch</span>
                 </a>
             </div>
 
@@ -399,7 +396,7 @@
                     </div>
                     <div class="veille-content">
                         <h3>Les nouveautés PHP 8.x</h3>
-                        <p>Analyse des dernières versions (8.3 et 8.4) : typage plus strict, amélioration des classes <em>Readonly</em>, et nouvelles fonctions comme <code>json_validate()</code>.</p>
+                        <p>Analyse des dernières versions (8.5 et 8.6) : typage plus strict, l'operateur pipe |> et nouvelles fonctions comme <code>clamp()</code>.</p>
                         
                         <div class="veille-tags">
                             <span class="tag">Performance</span>
@@ -483,22 +480,21 @@
                 <div class="footer-content">
                     <div class="footer-section">
                         <h3>Contacts</h3>
-                        <p>Email : <a href="mailto:boninoleonardo@gmail.com">boninoleonardo@gmail.com</a></p>
-                        <p>Téléphone : <a href="tel:+33749034251">+33 7 49 03 42 51</a></p>
+                        <p><a href="mailto:boninoleonardo@gmail.com">boninoleonardo@gmail.com</a></p>
+                        <p><a href="tel:+33749034251">+33 7 49 03 42 51</a></p>
                     </div>
 
                     <div class="footer-section">
                         <h3>Réseaux Sociaux</h3>
                         <div class="social-icons">
                             <a href="https://www.linkedin.com/in/leonardo-bonino-b71078244" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://www.instagram.com/leonardo_bonino_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                             <a href="https://github.com/LeonardoBnn" target="_blank"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
 
                     <div class="footer-section">
                         <h3>Adresse</h3>
-                        <p>Rue de Reuilly, Paris, France</p>
+                        <p>Ivry-sur-seine, France</p>
                     </div>
                 </div>
             </footer>
