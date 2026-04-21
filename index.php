@@ -286,15 +286,7 @@
             </div>
         </section>
         <br>
-        <br>
-        <h2>Certifications</h2>
-        <br><hr><br><br>
-        <section id="certification" class="certifications">
-            <div class="certification-card coming-soon">
-                <p>🎓 Bientôt disponible !</p>
-                <small>Des certifications seront ajoutées prochainement pour valider mes compétences.</small>
-            </div>
-        </section>
+        
         <br><br><h2>Mes projets :</h2>
         <br><hr><br><br>
         <section id="projets" class="">
@@ -305,17 +297,17 @@
                         <h3>GLPI</h3>
                         <p>Installation et configuration de GLPI sur une VM Debian 12.</p><br>
                         <p class="technologies">Linux</p>
-                        <a href="https://docs.google.com/presentation/d/1ZuUFy8vFfI9jE3_-yjgGzLP-5aLF-3zwtS6DSOXLsPM/preview" target="_blank" class="btn">Voir le projet</a>
+                        <a href="https://docs.google.com/presentation/d/1ZuUFy8vFfI9jE3_-yjgGzLP-5aLF-3zwtS6DSOXLsPM/preview" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
             
                 <div class="card">
-                    <img src="img/E-enseignement.PNG" alt="Page de connexion e-enseignement">
+                    <img src="img/atelierportrait.PNG" alt="Page d'auccueil atelierportrait.fr">
                     <div class="card-content">
-                        <h3>E-Enseignement</h3>
-                        <p>Création d'un site de e-enseignement pour le CFA-INSTA.</p>
-                        <p class="technologies">Html et CSS</p>
-                        <a href="https://docs.google.com/presentation/d/1GBg02V57BfiUCThv6oaUY7md01ET4zX1ZR4zJ1mMjpg/preview" target="_blank" class="btn">Voir le projet</a>
+                        <h3>Atelierportrait</h3>
+                        <p>Création d'un site vitrine pour renforcer l'identité digitale de Atelierportrait.</p>
+                        <p class="technologies">WordPress</p>
+                        <a href="https://docs.google.com/presentation/d/1HLa8i8NdMifuwKPcfcaAA5RtlZsof9mCDqY3b7cD3io/preview" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
 
@@ -325,7 +317,7 @@
                         <h3>PHPMailer</h3>
                         <p>Installation et configuration de la bibliothèque PHPMailer</p>
                         <p class="technologies">PHP</p>
-                        <a href="https://www.canva.com/design/DAG63oRT-jw/Hu_zBoNBbxKLCufE39FS2w/view?utm_content=DAG63oRT-jw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha41af5451e/preview" target="_blank" class="btn">Voir le projet</a>
+                        <a href="https://docs.google.com/presentation/d/1ASA57uoSTp0Fkmn8AgklK8H6L-GicyMy3hkonIPdFrI/preview" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
 
@@ -335,17 +327,17 @@
                         <h3>GymFit</h3>
                         <p>Création d'une application web pour la gestion de la salle de gym GymFit.</p>
                         <p class="technologies">PHP SQL HTML CSS</p>
-                        <a href="https://www.canva.com/design/DAGrFHy9Bq8/k7tobEpSRi5US6xDMig_cw/edit?utm_content=DAGrFHy9Bq8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn">Voir le projet</a>
+                        <a href="https://www.canva.com/design/DAGrFHy9Bq8/k7tobEpSRi5US6xDMig_cw/edit?utm_content=DAGrFHy9Bq8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
 
                 <div class="card">
                     <img src="img/Capture.accueil.PNG" alt="Page d'accueil TravelCase'">
                     <div class="card-content">
-                        <h3>Travel Casee</h3>
+                        <h3>Travel Cases</h3>
                         <p>Création d'une boutique en ligne pour la start-up TravelCase.</p>
                         <p class="technologies">Shopify</p>
-                        <a href="https://www.canva.com/design/DAGrFHy9Bq8/k7tobEpSRi5US6xDMig_cw/edit?utm_content=DAGrFHy9Bq8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn">Voir le projet</a>
+                        <a href="https://www.canva.com/design/DAGrFHy9Bq8/k7tobEpSRi5US6xDMig_cw/edit?utm_content=DAGrFHy9Bq8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
 
@@ -355,15 +347,15 @@
                         <h3>MedInfo</h3>
                         <p>Création d'une application web pour la gestion de rdv du centre médical Ramsay.</p>
                         <p class="technologies">PHP SQL HTML CSS</p>
-                        <a href="https://docs.google.com/presentation/d/1GBg02V57BfiUCThv6oaUY7md01ET4zX1ZR4zJ1mMjpg/preview" target="_blank" class="btn">Voir le projet</a>
+                        <a href="https://docs.google.com/presentation/d/1GBg02V57BfiUCThv6oaUY7md01ET4zX1ZR4zJ1mMjpg/preview" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
 
             </div>
         </section>
-        <br><br>
+        <br><br><br><br>
         <h2>Veille Technologique</h2>
-        <br><hr>
+        <hr>
         <section id="veille" class="veille-section">            
             <div class="veille-intro">
                 <p>
