@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initBtsReveal();
     initTimelineReveal();
     initTimelineSides();
+    initTableauModal()
 });
 
 function initTypingEffect() {
@@ -202,3 +203,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function initTableauModal() {
+    const cvButton = document.getElementById("tableauButton");
+    const cvModal = document.getElementById("modalTableau");
+    const cvFrame = document.getElementById("frameTableau");
+    const closeButton = cvModal ? cvModal.querySelector(".close") : null;
+
+    if (!cvButton || !cvModal || !cvFrame || !closeButton) return;
+
+    // Évite le chargement automatique du PDF
+    cvFrame.removeAttribute("src");
+
+    cvButton.addEventListener("click", event => {
+        event.preventDefault();
+
+        if (!cvFrame.getAttribute("src")) {
+            cvFrame.setAttribute("src", "tableauSynthese.pdf");
+        }
+
+        cvModal.style.display = "flex";
+    });
+
+    closeButton.addEventListener("click", () => {
+        cvModal.style.display = "none";
+    });
+
+    cvModal.addEventListener("click", event => {
+        if (event.target === cvModal) {
+            cvModal.style.display = "none";
+        }
+    });
+}

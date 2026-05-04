@@ -13,7 +13,7 @@
 
     <header>
         <nav class="nav-bar">
-            <img class="img-leo" src="img/cv.2.jpg" alt="photo de Leonardo Bonino">
+            <img class="img-leo" src="img/cv.2.png" alt="photo de Leonardo Bonino">
             <a href="#bienvenue"><i class="fa-solid fa-house"></i>&nbsp; Bienvenue</a>
             <a href="#apropos"><i class="fa-regular fa-user"></i>&nbsp; À propos</a>
             <a href="#monentreprise"><i class="fa-solid fa-briefcase"></i>&nbsp; Mon entreprise</a>
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <br><br>
-            <h2>Mes compètences :</h2>
+            <h2>Mes compétences :</h2>
             <br>
             <hr>
             <br>
@@ -106,8 +106,9 @@
                                 Conception et développement d’applications web avec une approche méthodique et sécurisée qui vise à améliorer la maintenabilité.
                             </p>
                             <ul class="enterprise-list">
-                                <li>PHP, MySQL</li>
+                                <li>PHP, Java, MySQL, Typescript</li>
                                 <li>HTML, CSS</li>
+                                <li>Spring Boot, Angula, Playwright</li>
                                 <li>Modélisation</li>
                                 <li>Sécurité Web</li>
                                 <li>Tests unitaires & débogage</li>
@@ -302,7 +303,7 @@
                 </div>
             
                 <div class="card">
-                    <img src="img/atelierportrait.PNG" alt="Page d'auccueil atelierportrait.fr">
+                    <img src="img/atelierportrait.png" alt="Page d'auccueil atelierportrait.fr">
                     <div class="card-content">
                         <h3>Atelierportrait</h3>
                         <p>Création d'un site vitrine pour renforcer l'identité digitale de Atelierportrait.</p>
@@ -312,7 +313,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="img/phpMailer.PNG" alt="Page de connexion MedInfo">
+                    <img src="img/phpMailer.png" alt="Page de connexion MedInfo">
                     <div class="card-content">
                         <h3>PHPMailer</h3>
                         <p>Installation et configuration de la bibliothèque PHPMailer</p>
@@ -322,12 +323,12 @@
                 </div>
 
                 <div class="card">
-                    <img src="img/GymFit.PNG" alt="Page de connexion GymFit">
+                    <img src="img/enqueteSNCF.png" alt="Page de connexion GymFit">
                     <div class="card-content">
-                        <h3>GymFit</h3>
-                        <p>Création d'une application web pour la gestion de la salle de gym GymFit.</p>
-                        <p class="technologies">PHP SQL HTML CSS</p>
-                        <a href="https://www.canva.com/design/DAGrFHy9Bq8/k7tobEpSRi5US6xDMig_cw/edit?utm_content=DAGrFHy9Bq8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn">Détails</a>
+                        <h3>Enquête de satisfaction</h3>
+                        <p>Création d'une application mobile pour une enquête de satisfaction des transports SNCF.</p>
+                        <p class="technologies">Java</p>
+                        <a href="https://docs.google.com/presentation/d/1M4tw3usxrXgkGyoyxszrV6OBiMH-4u0GmKXU8LcmznQ/preview" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
 
@@ -337,7 +338,7 @@
                         <h3>Travel Cases</h3>
                         <p>Création d'une boutique en ligne pour la start-up TravelCase.</p>
                         <p class="technologies">Shopify</p>
-                        <a href="https://www.canva.com/design/DAGrFHy9Bq8/k7tobEpSRi5US6xDMig_cw/edit?utm_content=DAGrFHy9Bq8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn">Détails</a>
+                        <a href="https://docs.google.com/presentation/d/1ycb_ooCZiL0mJwEPkDA8d98CNWJfCpBpqETusd06o-k/preview" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
 
@@ -346,8 +347,8 @@
                     <div class="card-content">
                         <h3>MedInfo</h3>
                         <p>Création d'une application web pour la gestion de rdv du centre médical Ramsay.</p>
-                        <p class="technologies">PHP SQL HTML CSS</p>
-                        <a href="https://docs.google.com/presentation/d/1GBg02V57BfiUCThv6oaUY7md01ET4zX1ZR4zJ1mMjpg/preview" target="_blank" class="btn">Détails</a>
+                        <p class="technologies">PHP MySQL Java</p>
+                        <a href="https://docs.google.com/presentation/d/1AZNTXR0nCP_R-9pwH0GujptILGF_g2JxUtCYhpKvhbk/preview" target="_blank" class="btn">Détails</a>
                     </div>
                 </div>
 
@@ -461,11 +462,20 @@
             </div>
         </section>
 
-        
+            <div class="cv">
+                <button class="moncv" id="tableauButton" type="button">Tableau de synthèse</button>
+            </div>
+
+            <div id="modalTableau" class="modal" ">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe id="frameTableau" width="100%" height="600px" ></iframe>
+                </div>
+            </div>
+
         <section id="contacts" class="contacts">
             <footer class="footer">
                 <div class="contact-section">
-                    <h2>Contacts</h2>
                     <p>Une question, un projet, une collaboration ?</p>
                     <a href="view/contact.php" class="contact-button">Me contacter</a>
                 </div>
@@ -485,7 +495,7 @@
                     </div>
 
                     <div class="footer-section">
-                        <h3>Adresse</h3>
+                        <h3>Localisation</h3>
                         <p>Ivry-sur-seine, France</p>
                     </div>
                 </div>
